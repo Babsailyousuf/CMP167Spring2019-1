@@ -1,0 +1,95 @@
+
+ 
+/* 3/12/19
+ * Yousuf Babsail
+ * this program gives you the area for a circle, rectangle and triangle 
+ * modified 3.14.19
+ */
+import java.util.Scanner;
+
+public class rectarea {
+/*
+ * Circle: void 
+ * input: radius
+ * process: area = pi * radius * radius
+ * output: area
+ */
+
+static Scanner keyboard = new Scanner(System.in);
+/*
+ * 
+ * getRectarea : int 
+ * parameters: width : int , length : int 
+ * calculates rectangle area 
+ * 
+ */
+ 
+public static double getcircarea( double  radius ){
+	 return (Math.PI * Math.pow(radius,2));
+			 }
+public static void CircArea (){
+int radius;
+double area;
+
+System.out.println("Let's calculate circle area");
+System.out.println("Enter radius for the circle: ");
+radius = keyboard.nextInt();//with the user input it can be stored in as a variable 
+area = (Math.PI * Math.pow(radius, 2));// this is doing the calculation 
+
+System.out.println("The area of the circle is: " + area);
+}
+
+
+public static int getrectarea(int width, int length){
+	 return width * length;}
+public static void RectArea (){
+
+
+int width, length, area;
+
+//input
+System.out.println("Enter width of the rectangle: ");
+width = keyboard.nextInt();//width is stored in as a variable 
+System.out.println("Enter length of the rectangle: ");
+length= keyboard.nextInt();//length is stored as a variable 
+//process/calculation
+area= (length * width);//doing calculation
+//output
+System.out.println("The rectangle area is: " + area);
+}
+
+
+
+public static int gettriarea(int height, int base){
+	 return (base * height) / 2;
+}
+public static void triarea() {
+ int height, base;
+ double area;
+ 
+ System.out.println("Enter the height of the triangle: ");
+ height= keyboard.nextInt();
+ // height is stored as a variable 
+ 
+ System.out.println("Enter the base of the triangle: ");
+ base=keyboard.nextInt();
+//base is stored as a variable 
+ 
+area = (base*height)/2;
+// calculation is being made to find the area of the triangle 
+System.out.println("The area of the triangle is: " + area);
+
+}
+
+
+
+
+
+
+//for debugging and output will be shown 
+public static void main(String [] args) {
+CircArea(); 
+RectArea();
+triarea();
+}
+}
