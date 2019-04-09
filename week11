@@ -11,7 +11,7 @@ public class Calculate {
 	}
 	return total;
 	}
-	public static double averageList(int[] iArray) {
+	public static int averageList(int[] iArray) {
 		int avg=0;
 		avg=sumList(iArray)/iArray.length;
 		
@@ -29,7 +29,7 @@ public class Calculate {
 		int[] iArray1= {54,45,78,57,63,14};
 		int[] iArray2= {5,4,72,47,16,7};
 		int sum2=sumList(iArray2);
-		double avg2=averageList(iArray2);
+		int avg2=averageList(iArray2);
 	System.out.printf("The sum of all elements in Array one is "
 		+ "is %d \nand the avererage is %d\n", sumList(iArray1), averageList(iArray1));
 	System.out.printf("the sum of all elements is %d and the average is %d", sum2,avg2);
