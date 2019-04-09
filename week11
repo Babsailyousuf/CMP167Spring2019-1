@@ -1,0 +1,40 @@
+
+/*Author: Yousuf Babsail
+ * made on: 4/9/2019
+ * description-using array 
+ */
+public class Calculate {
+	public static int sumList(int [] list){
+	int total=0;
+	for(int i=0; i<list.length; i++) {
+		total += list[i];
+	}
+	return total;
+	}
+	public static double averageList(int[] iArray) {
+		int avg=0;
+		avg=sumList(iArray)/iArray.length;
+		
+		return avg;
+		}
+	public static int oddList(int[] iArray) {
+		int odd=0;
+		for (int i = 0; i < iArray.length; i++) {
+			if (i % 2 != 0) {
+				System.out.println("This is the amount of number that is odd");}
+	}
+		return odd;
+	}
+	public static void main (String[] args) {
+		int[] iArray1= {54,45,78,57,63,14};
+		int[] iArray2= {5,4,72,47,16,7};
+		int sum2=sumList(iArray2);
+		double avg2=averageList(iArray2);
+	System.out.printf("The sum of all elements in Array one is "
+		+ "is %d \nand the avererage is %d\n", sumList(iArray1), averageList(iArray1));
+	System.out.printf("the sum of all elements is %d and the average is %d", sum2,avg2);
+	}	
+}
+	
+	
+	
