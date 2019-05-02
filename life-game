@@ -1,0 +1,67 @@
+import java.util.Random;
+public class Game {
+	public static void main(String[] args) {
+		Human person1 = new Human (); //Creating Human Object 
+		Human person2 = new Human ();
+		Human person3 = new Human ("Yousuf", 19);
+		person2.setage(19);
+		person1.setname("sef");
+		person1.setage(19);
+		person1.eat();
+		person1.work();
+
+		System.out.println("age " + person1.getage());
+		System.out.println("age " + person2.getage());
+		System.out.println("age " + person3.getage());
+		System.out.println(person1);
+
+		int rand = (int) (Math.random()*80)+1;
+		System.out.println("yoo"+rand);
+
+		Random rn=new Random();
+		int n = rn.nextInt(44);	
+		System.out.println(n +"boo");
+
+
+
+		//	
+		//	System.out.println("Hunger L " + person1.hunger);
+		//	System.out.println("Food " + person1.hunger);
+		//	
+		//	System.out.println("Eatting command:");
+		//	person1.eat();
+		//	
+		//	System.out.println("Eatting command:");
+		//	person1.eat();
+		//	
+		//	System.out.println("Eatting command:");
+		//	person1.eat();
+		//	
+		//	System.out.println("Eatting command:");
+		//	System.out.println("HungerL " + person1.hunger);
+		//	System.out.println("Food " + person1.hunger);
+		//	System.out.println("Buying food command");
+		//	
+		//	person1.buyFood();
+		//	System.out.println("Working command:");
+		//	
+		//	person1.work();
+		//	System.out.println("Working command:");
+		//	
+		//	person1.buyFood();
+		//	System.out.println("Eatting command:");
+		//	
+		//	person1.work();
+		//	System.out.println("Working command:");
+		//	
+		//	person1.work();
+		//	System.out.println("Working command:");
+		//	
+		//	person1.eat();
+		//	System.out.println("Eatting command:");
+		//	
+		//	person1.work();
+		//	System.out.println("Working command:");	
+
+	}
+}
