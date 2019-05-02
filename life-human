@@ -1,0 +1,94 @@
+/*
+ * Author: Yousuf Babsail
+ * Description: 
+ * Created
+ * 
+ */
+public class Human {
+	// We have achieved encapsulation by having our instance variable private 
+	// we then will provide setter and getters to provide access 
+	//Instance variable
+	private static int age; //they belong to the object
+	private int food; 
+	private double wealth;
+	private double hunger;
+	private boolean hasVehicle;
+	private String name;
+	private Vehicle[] vehicles;
+
+	public Human () {//constructor new human();  
+		this.age        = 0; //this refers to object, or instantiation of the class 
+		this.name       = "";
+		this.wealth     = 0.0;
+		this.hasVehicle = false;
+		this.hunger     = 5.0;
+		this.food       = 5;
+		this.vehicles   = new Vehicle[100]; //created an array of vehicles 		
+	}
+	//getter: Returns value of instance variable 
+	public int getage() {
+		return this.age;
+	}
+	//The two string methods provides a String representation of the object 
+	@Override
+	public String toString () {
+		return "Human: name " + getage() + ", age: " + getage() + ", wealth " + this.wealth+"$";
+	}
+	//setters: Changes the values of instance variables 
+	public void setage(int age) {
+		this.age = age; 
+	}
+	public void setname(String name) {
+		this.name = name;
+	}
+	public Human (String name, int age) {//overloaded constructor
+		this.age = age;
+		this.name="";
+		this.wealth=0.0;
+		this.hasVehicle=false;
+		this.hunger=5.0;
+		this.food=5;
+		this.vehicles= new Vehicle[100];		
+	}
+	public int numberOfVehicles(){
+		int total =0; 
+		for (int i=0; i<vehicles.length; i++)
+		{ if(vehicles[i]!=null)
+			total++;		
+		else 
+			break;
+		}
+		return  total;	
+	}
+	public void eat(){
+		if (food>4.5){
+			hunger -=1.0;
+			food -= 1;
+			System.out.println("Yum yum and yum,  I ate up all of it");
+		}
+		else 
+			System.out.println("Not enough food! Please go and get food");
+	}
+	public void eat(double food) {
+		hunger -= (food/4.5);
+	}
+	public void grow() {
+		age++;
+	}
+	public void work(){
+		if (hunger < 5)	{
+			wealth+=10.5;
+			hunger +=0.5;
+			System.out.println("Whoah, I worked odee!");
+		}else 
+			System.out.println("Too hungry to work.");
+	}
+	public void buyFood() {
+		if (wealth > 5 ) {
+			wealth -= 4.5;
+			food++;
+			System.out.println("yoohoo! I bought some food");
+		}else
+			System.out.println("Not enough money, go work ");
+	}
+}
